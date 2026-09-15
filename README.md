@@ -74,7 +74,7 @@ print("| 0 | 2  | 3 | -   | Bukan persamaan kuadrat| Bukan persamaan kuadrat    
 
 # Refleksi:
 
-# Kesalahan logika yang pernah ditemukan adalah lupa menambahkan tanda kurung pada penyebut (2*a).
-# Awalnya ditulis (-b + D**0.5) / 2 * a, sehingga hasil akar salah karena pembagian hanya dengan 2 lalu dikali a.
-# Perbaikan dilakukan dengan menuliskan rumus lengkap (-b ± (D**0.5)) / (2*a).
-# Dengan perbaikan ini, hasil akar sesuai teori persamaan kuadrat.
+Kesalahan logika yang pernah ditemukan adalah lupa menambahkan tanda kurung pada penyebut (2*a).
+Awalnya ditulis (-b + D**0.5) / 2 * a, sehingga hasil akar salah karena pembagian hanya dengan 2 lalu dikali a.
+Perbaikan dilakukan dengan menuliskan rumus lengkap (-b ± (D**0.5)) / (2*a).
+Dengan perbaikan ini, hasil akar sesuai teori persamaan kuadrat.
