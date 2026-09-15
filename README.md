@@ -13,19 +13,13 @@ Menulis program seleksi `if`, `if-else`, kondisi majemuk, dan `nested if` untuk 
 ## 🚀 Cara Menjalankan
 Setiap program dijalankan dari terminal dengan perintah:
 
-```bash
-## Cara Menjalankan
-
-Jalankan masing-masing program dengan perintah berikut di terminal:
-
-```bash
-# Folder latihan
+Folder latihan
 python3 latihan/01_genap_ganjil.py
 python3 latihan/02_bandingkan_dua_bilangan.py
 python3 latihan/03_kelulusan_bersyarat.py
 python3 latihan/04_jenis_segitiga.py
 
-# Folder tugas
+Folder tugas
 python3 tugas/analisis_persamaan_kuadrat.py
 
 ## Algoritma Tugas
@@ -84,9 +78,3 @@ print("| 0 | 2  | 3 | -   | Bukan persamaan kuadrat| Bukan persamaan kuadrat    
 # Awalnya ditulis (-b + D**0.5) / 2 * a, sehingga hasil akar salah karena pembagian hanya dengan 2 lalu dikali a.
 # Perbaikan dilakukan dengan menuliskan rumus lengkap (-b ± (D**0.5)) / (2*a).
 # Dengan perbaikan ini, hasil akar sesuai teori persamaan kuadrat.
-
-print("\n=== Refleksi ===")
-print("Kesalahan logika yang ditemukan adalah lupa menambahkan tanda kurung pada penyebut (2*a).")
-print("Awalnya ditulis (-b + D**0.5) / 2 * a, sehingga hasil akar salah.")
-print("Perbaikan dilakukan dengan menuliskan rumus lengkap (-b ± (D**0.5)) / (2*a).")
-print("Dengan perbaikan ini, hasil akar sesuai teori persamaan kuadrat.")
