@@ -1,46 +1,92 @@
-# readme_output.py
-# Program untuk menampilkan isi README Pertemuan 03 Seleksi Python
+# Pertemuan 03 Seleksi Python
+Nama: Siti Nurhasanah  
+NIM: 2225250073  
+Kelas: 3B  
 
-def main():
-    print("# Pertemuan 03 Seleksi Python")
-    print("Nama: Siti Nurhasanah")
-    print("NIM: 2225250073")
-    print("Kelas: 3B\n")
+---
 
-    print("## Tujuan")
-    print("Menulis program seleksi if, if-else, kondisi majemuk, dan nested if.\n")
+## 🎯 Tujuan
+Menulis program seleksi `if`, `if-else`, kondisi majemuk, dan `nested if` untuk berbagai kasus sederhana.
 
-    print("## Cara Menjalankan")
-    print("python3 tugas/analisis_persamaan_kuadrat.py\n")
+---
 
-    print("## Algoritma Tugas")
-    print("1. Baca input dari pengguna.")
-    print("2. Gunakan seleksi if atau nested if sesuai kebutuhan.")
-    print("3. Tentukan kondisi yang harus dipenuhi (misalnya genap/ganjil, syarat segitiga, syarat kelulusan).")
-    print("4. Hitung nilai tambahan jika diperlukan (misalnya diskriminan).")
-    print("5. Tampilkan hasil sesuai cabang kondisi.\n")
+## 🚀 Cara Menjalankan
+Setiap program dijalankan dari terminal dengan perintah:
 
-    print("## Hasil Pengujian")
-    print("| Program | Input | Output yang Diharapkan | Output Aktual | Status |")
-    print("|---------|-------|-------------------------|---------------|--------|")
-    print("| 01_genap_ganjil | 8 | 8 adalah bilangan genap | 8 adalah bilangan genap | ✅ |")
-    print("| 01_genap_ganjil | 13 | 13 adalah bilangan ganjil | 13 adalah bilangan ganjil | ✅ |")
-    print("| 02_bandingkan_dua_bilangan | (7,4) | Bilangan pertama lebih besar | Bilangan pertama lebih besar | ✅ |")
-    print("| 02_bandingkan_dua_bilangan | (5,5) | Kedua bilangan sama | Kedua bilangan sama | ✅ |")
-    print("| 03_kelulusan_bersyarat | (75,85) | Lulus | Lulus | ✅ |")
-    print("| 03_kelulusan_bersyarat | (55,90) | Belum lulus | Belum lulus | ✅ |")
-    print("| 04_jenis_segitiga | (5,5,5) | Segitiga sama sisi | Segitiga sama sisi | ✅ |")
-    print("| 04_jenis_segitiga | (2,3,10) | Tidak membentuk segitiga | Tidak membentuk segitiga | ✅ |")
-    print("| analisis_persamaan_kuadrat | (1,-5,6) | Dua akar real: 3 dan 2 | Dua akar real: 3.00 dan 2.00 | ✅ |")
-    print("| analisis_persamaan_kuadrat | (1,2,1) | Akar kembar: -1 | Akar kembar: -1.00 | ✅ |")
-    print("| analisis_persamaan_kuadrat | (1,0,1) | Tidak ada akar real | Tidak ada akar real | ✅ |")
-    print("| analisis_persamaan_kuadrat | (0,2,3) | Bukan persamaan kuadrat | Bukan persamaan kuadrat | ✅ |\n")
+```bash
+## Cara Menjalankan
 
-    print("## Refleksi")
-    print("- Kesalahan yang sempat muncul adalah lupa menambahkan tanda kurung pada penyebut 2*a sehingga hasil akar salah.")
-    print("- Perbaikan dilakukan dengan menuliskan rumus lengkap (-b ± (D ** 0.5)) / (2 * a).")
-    print("- Dari latihan ini saya belajar bahwa struktur seleksi bersyarat sangat penting untuk menghindari error logika.")
-    print("- Saya juga semakin paham bahwa uji coba dengan test case wajib membantu memastikan program berjalan sesuai teori.\n")
+Jalankan masing-masing program dengan perintah berikut di terminal:
 
-if __name__ == "__main__":
-    main()
+```bash
+# Folder latihan
+python3 latihan/01_genap_ganjil.py
+python3 latihan/02_bandingkan_dua_bilangan.py
+python3 latihan/03_kelulusan_bersyarat.py
+python3 latihan/04_jenis_segitiga.py
+
+# Folder tugas
+python3 tugas/analisis_persamaan_kuadrat.py
+
+## Algoritma Tugas
+
+1. Program membaca input koefisien `a`, `b`, dan `c` sebagai bilangan float.
+2. Periksa apakah `a = 0`.  
+   - Jika ya, tampilkan pesan "Bukan persamaan kuadrat".
+3. Jika `a ≠ 0`, hitung diskriminan `D = b ** 2 - 4 * a * c`.
+4. Gunakan nested if untuk memeriksa nilai D:
+   - Jika `D > 0`, hitung dua akar real berbeda dengan rumus:
+     - `x1 = (-b + (D ** 0.5)) / (2 * a)`
+     - `x2 = (-b - (D ** 0.5)) / (2 * a)`
+   - Jika `D = 0`, hitung akar kembar dengan rumus:
+     - `x = -b / (2 * a)`
+   - Jika `D < 0`, tampilkan pesan "Tidak ada akar real".
+5. Semua hasil ditampilkan dengan format dua angka di belakang koma.
+# analisis_persamaan_kuadrat.py
+# Program untuk menganalisis persamaan kuadrat ax^2 + bx + c = 0
+# Termasuk dokumentasi hasil pengujian
+
+print("Analisis Persamaan Kuadrat")
+
+a = float(input("Koefisien a: "))
+b = float(input("Koefisien b: "))
+c = float(input("Koefisien c: "))
+
+if a == 0:
+    print("Bukan persamaan kuadrat.")
+else:
+    D = b ** 2 - 4 * a * c
+    print(f"Diskriminan = {D:.2f}")
+
+    if D > 0:
+        x1 = (-b + D ** 0.5) / (2 * a)
+        x2 = (-b - D ** 0.5) / (2 * a)
+        print(f"Dua akar real berbeda: x1 = {x1:.2f}, x2 = {x2:.2f}")
+    else:
+        if D == 0:
+            x = -b / (2 * a)
+            print(f"Akar real kembar: x = {x:.2f}")
+        else:
+            print("Tidak ada akar real.")
+
+# Dokumentasi hasil pengujian
+print("\n=== Hasil Pengujian ===")
+print("| a | b  | c | D   | Output yang Diharapkan | Output Aktual | Status |")
+print("|---|----|---|-----|------------------------|---------------|--------|")
+print("| 1 | -5 | 6 | 1   | Dua akar real: 3 dan 2 | Dua akar real: 3.00 dan 2.00 | ✅ |")
+print("| 1 | 2  | 1 | 0   | Akar kembar: -1        | Akar kembar: -1.00           | ✅ |")
+print("| 1 | 0  | 1 | -4  | Tidak ada akar real    | Tidak ada akar real          | ✅ |")
+print("| 0 | 2  | 3 | -   | Bukan persamaan kuadrat| Bukan persamaan kuadrat      | ✅ |")
+
+# Refleksi:
+
+# Kesalahan logika yang pernah ditemukan adalah lupa menambahkan tanda kurung pada penyebut (2*a).
+# Awalnya ditulis (-b + D**0.5) / 2 * a, sehingga hasil akar salah karena pembagian hanya dengan 2 lalu dikali a.
+# Perbaikan dilakukan dengan menuliskan rumus lengkap (-b ± (D**0.5)) / (2*a).
+# Dengan perbaikan ini, hasil akar sesuai teori persamaan kuadrat.
+
+print("\n=== Refleksi ===")
+print("Kesalahan logika yang ditemukan adalah lupa menambahkan tanda kurung pada penyebut (2*a).")
+print("Awalnya ditulis (-b + D**0.5) / 2 * a, sehingga hasil akar salah.")
+print("Perbaikan dilakukan dengan menuliskan rumus lengkap (-b ± (D**0.5)) / (2*a).")
+print("Dengan perbaikan ini, hasil akar sesuai teori persamaan kuadrat.")
