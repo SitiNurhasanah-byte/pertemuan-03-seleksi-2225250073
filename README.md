@@ -37,8 +37,8 @@ python3 tugas/analisis_persamaan_kuadrat.py
    - Jika `D < 0`, tampilkan pesan "Tidak ada akar real".
 5. Semua hasil ditampilkan dengan format dua angka di belakang koma.
 # analisis_persamaan_kuadrat.py
-# Program untuk menganalisis persamaan kuadrat ax^2 + bx + c = 0
-# Termasuk dokumentasi hasil pengujian
+Program untuk menganalisis persamaan kuadrat ax^2 + bx + c = 0
+Termasuk dokumentasi hasil pengujian
 
 print("Analisis Persamaan Kuadrat")
 
